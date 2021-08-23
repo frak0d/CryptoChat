@@ -38,9 +38,9 @@ int main()
 			
 			try
 			{
-				output = aesManager.encrypt(input, key, mine::MineCommon::Encoding::Raw, mine::MineCommon::Encoding::Base64);
+				output = aesManager.encrypt(input, key, mine::MineCommon::Encoding::Raw, mine::MineCommon::Encoding::Base64, true);
 				input.clear();
-				cout << "Output :-\n\n" << output << endl;
+				cout << "\nOutput :-\n\n" << output << endl;
 			}
 			catch (exception &e)
 			{
@@ -56,7 +56,7 @@ int main()
 				cout << "<paste> "; getline(cin, input);
 				output = aesManager.decrypt(input, key, mine::MineCommon::Encoding::Base64, mine::MineCommon::Encoding::Raw);
 				input.clear();
-				cout << "Output :-\n\n" << output << endl;
+				cout << "\nOutput :-\n\n" << output << endl;
 			}
 			catch (exception &e)
 			{
@@ -68,6 +68,12 @@ int main()
 		else if (raw_input == "setkey")
 		{
 			cout << "Enter Key : "; getline(cin, key);
+		}
+		
+		else if (raw_input == "clear")
+		{
+			cout.flush();
+			cout << "\033c";
 		}
 		
 		else if (raw_input == "exit")
