@@ -8,3 +8,4 @@ Text encryption/decryption with AES-256 and Base64 using [Mine](https://github.c
 2. `dec` - Decode a Base64 String
 3. `setkey` - Sets encryption/decryption Key
 4. `exit` - Exits the Program
+5. `clear` - Clears the Screen
