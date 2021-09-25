@@ -42,7 +42,7 @@ int main()
 				input.clear();
 				cout << "\nOutput :-\n\n" << output << endl;
 			}
-			catch (exception &e)
+			catch (exception& e)
 			{
 				cout << "Error, " << e.what() << endl;
 				continue;
@@ -58,7 +58,7 @@ int main()
 				input.clear();
 				cout << "\nOutput :-\n\n" << output << endl;
 			}
-			catch (exception &e)
+			catch (exception& e)
 			{
 				cout << "Error, " << e.what() << endl;
 				continue;
